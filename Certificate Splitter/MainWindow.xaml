@@ -1,0 +1,21 @@
+﻿<Window x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Certificate Splitter" Style="{StaticResource MyWindowStyle}" Height="240" Width="423" Icon="Resources/3M Logo Trans-Red.ico" ResizeMode="NoResize" BorderThickness="0" MouseLeftButtonDown="Window_MouseLeftButtonDown" Loaded="Window_Loaded" Closed="Window_Closed" Foreground="WhiteSmoke" WindowStyle="None">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent" Margin="0">
+        <ProgressBar x:Name="pb" HorizontalAlignment="Left" Height="4" Margin="2,194,0,0" VerticalAlignment="Top" Width="405" BorderBrush="{x:Null}" Background="#FF2F2F32"/>
+        <Image x:Name="logoimg" Margin="145,5,81,0" Source="Resources/Science - White.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="35" Width="188" AllowDrop="True"/>
+        <Image x:Name="dropimg" HorizontalAlignment="Left" Height="123" Margin="3,3,0,0" VerticalAlignment="Top" Width="121" Source="Resources/DropHere2.png" Stretch="UniformToFill" AllowDrop="True"/>
+        <Label x:Name="pfxlabel" Content="PFX file path.." HorizontalAlignment="Left" Margin="138,55,0,0" VerticalAlignment="Top" Height="29" Width="269" Background="#FF333333" BorderThickness="1" FontSize="14" Foreground="#FFD1D1D1" IsHitTestVisible="True"/>
+        <Label x:Name="pathlabel" Content="PFX file export path.." HorizontalAlignment="Left" Margin="138,97,0,0" VerticalAlignment="Top" Height="29" Width="269" BorderThickness="1" FontSize="14" Foreground="#FFD1D1D1" Background="#FF333333" IsHitTestVisible="True"/>
+        <Button x:Name="exportpathbtn" Style="{StaticResource PlainButtonStyle}" Content="Export Path" HorizontalAlignment="Left" Margin="332,98,0,0" VerticalAlignment="Top" Width="75" Foreground="#FFD1D1D1" BorderBrush="{x:Null}" Background="#FF2D2D30" Height="27"/>
+        <PasswordBox x:Name="pfxpassbox" HorizontalAlignment="Left" Margin="138,139,0,0" VerticalAlignment="Top" Width="269" Height="27" Background="#FF333333" SelectionBrush="#FFFF0017" Foreground="#FFD1D1D1" BorderBrush="{x:Null}" FontSize="20"/>
+        <Label x:Name="passprompt" Content="Enter PFX password..." HorizontalAlignment="Left" Margin="139,139,0,0" VerticalAlignment="Top" IsHitTestVisible="False" Foreground="#FFD1D1D1" Width="146" Height="27" FontSize="14"/>
+        <Button x:Name="splitbtn" Content="Split" Style="{StaticResource PlainButtonStyle}" HorizontalAlignment="Left" Margin="332,139,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Foreground="#FFD1D1D1" BorderBrush="{x:Null}" Background="#FF4E4E4E" Height="27"/>
+        <Label x:Name="donelabel" Content="Please select your PFX file, export path and type in the password" HorizontalAlignment="Left" Margin="2,169,0,0" Foreground="#FFF50000" Width="405" FontFamily="Arial" Height="25" HorizontalContentAlignment="Center" VerticalAlignment="Top"/>
+        <Image x:Name="chk1" HorizontalAlignment="Left" Height="36" Margin="377,52,0,0" VerticalAlignment="Top" Width="33" Source="Resources/Check-Mark-128.png" Stretch="UniformToFill" IsEnabled="False" Visibility="Hidden"/>
+        <Image x:Name="chk2" HorizontalAlignment="Left" Height="36" Margin="303,94,0,0" VerticalAlignment="Top" Width="33" Source="Resources/Check-Mark-128.png" Stretch="UniformToFill" IsEnabled="False" Visibility="Hidden"/>
+        <Image x:Name="chk3" HorizontalAlignment="Left" Height="36" Margin="303,136,0,0" VerticalAlignment="Top" Width="33" Source="Resources/Check-Mark-128.png" Stretch="UniformToFill" IsEnabled="False" Visibility="Hidden"/>
+        <Button x:Name="browsepfx" Content="Or Browse" Style="{StaticResource PlainButtonStyle}" HorizontalAlignment="Left" Margin="3,139,0,0" VerticalAlignment="Top" Width="121" Foreground="#FFD1D1D1" BorderBrush="{x:Null}" Background="#FF4E4E4E" Height="29"/>
+    </Grid>
+</Window>
